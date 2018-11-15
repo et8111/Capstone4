@@ -1,0 +1,86 @@
+body{
+    background-color: rgb(255, 81, 0);
+    background-image: url("https://i.imgur.com/JEIz83W.png");
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-width: 1000px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+#starter
+{
+    text-align:center;
+    margin-top: 50px;
+}
+#starter button{
+    padding: 20px;
+    background-color: #fcb040;
+    border: 1px black solid;
+    font-weight: bold;
+    font-size: 25px;
+    width:174px;
+}
+#starter button:hover{
+    background-color: #ffc46c;
+    cursor:-webkit-grab;
+}
+#starter button:active{
+    cursor:-webkit-grabbing;
+    background-color: #ffd99f;
+}
+
+#left{
+    margin-left: 10%;
+    width: 30%;
+    border: 1px black solid;
+}
+#right{
+    float: right;
+    margin-right: 10%;
+    width: 30%;
+    border: 1px black solid;
+}
+.WhiteBack{
+    background-color: rgba(252, 176, 64, .9);
+    color:white;
+    padding:5px;
+    padding: 10px 15px 10px 30px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+/*#item
+{
+    color:black;
+    display:inline-block;
+    padding: 20px;
+    background-color: #ffebcc;
+    border: 1px black solid;
+    font-weight: bold;
+    font-size: 20px;
+    width:65%;
+}*/
+.WhiteBack button{
+    color:black;
+    display:inline-block;
+    padding: 20px;
+    background-color: #ffebcc;
+    border: 1px black solid;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    width:70%;
+}
+.WhiteBack button:hover{
+    background-color:#f8cc8b;
+    cursor:-webkit-grab;
+}
+
+.WhiteBack button:active{
+    cursor:-webkit-grabbing;
+    background-color: #ffb039;
+}
