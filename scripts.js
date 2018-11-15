@@ -2,27 +2,10 @@ var items = LOADER();
 
 function LOADER()
 {
-    var items = [];
-    var item1 = ["Cheesebuger",3.0,0];
-    items.push(item1);
-    var item1 = ["Hamburger",3.0,0];
-    items.push(item1);
-    var item1 = ["Bacon Smokehouse Burger",5.0,0];
-    items.push(item1);
-    var item1 = ["Double Bacon Smokehouse Burger",5.0,0];
-    items.push(item1);
-    var item1 = ["10 Piece Nuggets", 6.0, 0];
-    items.push(item1);
-    var item1 = ["Double Cheeseburger",3.0,0];
-    items.push(item1);
-    var item1 = ["Filet-O-Fish",3.0,0];
-    items.push(item1);
-    var item1 = ["Artisan Grilled Chicken Sandwich",5.0,0];
-    items.push(item1);
-    var item1 = ["Grilled Chicken Sandwich",3.0,0];
-    items.push(item1);
-    var item1 = ["Double 1/4lb With Cheese",6.0,0];
-    items.push(item1);
+    var items = [["Cheesebuger",3.0,0],["Hamburger",3.0,0],["Bacon Smokehouse Burger",5.0,0]
+    ,["Double Bacon Smokehouse Burger",5.0,0],["10 Piece Nuggets", 6.0, 0],["Double Cheeseburger",3.0,0]
+    ,["Filet-O-Fish",3.0,0],["Artisan Grilled Chicken Sandwich",5.0,0],["Grilled Chicken Sandwich",3.0,0]
+    ,["Double 1/4lb With Cheese",6.0,0]];
 return items;
 }
 
@@ -99,4 +82,14 @@ function printer()
 {
     for(var i = 0; i < items.length; i++)
     console.log(items[i][0] + " " + items[i][1] + " " + items[i][2]);
+}
+
+function STARTER()
+{
+    var s = document.getElementById("starter").childNodes[0].innerHTML;
+    if (s == "Start Order")
+    {
+        $('#right').fadeIn(1000);
+        $('#left').fadeIn(1000);
+    }
 }

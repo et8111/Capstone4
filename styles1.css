@@ -75,8 +75,13 @@ body{
     font-size: 20px;
     width:70%;
 }
-.WhiteBack button:hover{
-    background-color:#f8cc8b;
+
+#right button:hover{
+    background-color:#fc472f;
+    cursor:-webkit-grab;
+}
+#left button:hover{
+    background-color:#87db38;
     cursor:-webkit-grab;
 }
 
