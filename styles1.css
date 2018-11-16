@@ -85,7 +85,7 @@ body{
     cursor:-webkit-grab;
 }
 
-.WhiteBack button:active{
+#left button:active, #right button:active{
+    background-color:#ffb039;
     cursor:-webkit-grabbing;
-    background-color: #ffb039;
 }
