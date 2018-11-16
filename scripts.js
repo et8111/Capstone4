@@ -70,10 +70,7 @@ function remover(s)
     items[x][2]--;
     s.childNodes[0].innerHTML = items[x][2] + " ";
     if (s.childNodes[0].innerHTML == 0)
-    {
-        alert();
             s.remove();
-    }
     s.childNodes[2].innerHTML = " $"+(items[x][1]*s.childNodes[0].innerHTML*1.06).toFixed(2);
     }
 
