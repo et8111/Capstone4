@@ -88,4 +88,5 @@ body{
 #left button:active, #right button:active{
     background-color:#ffb039;
     cursor:-webkit-grabbing;
+    border-radius: 15px;
 }

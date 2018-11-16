@@ -23,7 +23,7 @@ $( document ).ready(function() {
         buttonNode.innerHTML = items[i][0];
         var label2Node = document.createElement('label');
         label2Node.setAttribute("class", "price");
-        label2Node.innerHTML = " : $" + items[i][1];
+        label2Node.innerHTML = " $" + items[i][1];
 
         divNode.append(label1Node);
         divNode.append(buttonNode);
@@ -50,7 +50,7 @@ function ADDER(s)
         buttonNode.innerHTML = newItem[0][0];
         var label2Node = document.createElement('label');
         label2Node.setAttribute("id", "priceQ");
-        label2Node.innerHTML = " : $" + ((newItem[0][1] * newItem[0][2]) * 1.06).toFixed(2);
+        label2Node.innerHTML = " $" + ((newItem[0][1] * newItem[0][2]) * 1.06).toFixed(2);
 
         divNode.append(label1Node);
         divNode.append(buttonNode);
@@ -68,7 +68,7 @@ function remover(s)
     items[x][2]--;
     if (s.childNodes[0].innerHTML == "0")
             s.remove();
-    s.childNodes[2].innerHTML = ": $"+(items[x][1]*s.childNodes[0].innerHTML*1.06).toFixed(2);
+    s.childNodes[2].innerHTML = " $"+(items[x][1]*s.childNodes[0].innerHTML*1.06).toFixed(2);
     }
 
 //checks if already exists in the cart and adds to element
@@ -84,7 +84,7 @@ function checkCart(newItem)
             flag = true;
             ++list[i].childNodes[0].innerHTML;
             newItem[0][2]++;
-            list[i].childNodes[2].innerHTML = " : $" + ((newItem[0][1] * newItem[0][2]) * 1.06).toFixed(2);
+            list[i].childNodes[2].innerHTML = " $" + ((newItem[0][1] * newItem[0][2]) * 1.06).toFixed(2);
         }
     }
     return flag;
