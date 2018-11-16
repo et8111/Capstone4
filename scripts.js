@@ -23,7 +23,7 @@ $( document ).ready(function() {
         buttonNode.innerHTML = items[i][0];
         var label2Node = document.createElement('label');
         label2Node.setAttribute("class", "price");
-        label2Node.innerHTML = " $" + items[i][1];
+        label2Node.innerHTML = " $" + items[i][1].toFixed(2);
 
         divNode.append(label1Node);
         divNode.append(buttonNode);
@@ -44,12 +44,15 @@ function ADDER(s)
         divNode.setAttribute("class", "cart");
         var label1Node = document.createElement('label');
         label1Node.setAttribute("class", "quantity");
-        label1Node.innerHTML = ++newItem[0][2];
+        label1Node.setAttribute("style","text-align:left");
+        label1Node.innerHTML = ++newItem[0][2] +"  ";
         var buttonNode = document.createElement('button');
         buttonNode.setAttribute("onclick","remover(this.parentElement);");
+        buttonNode.setAttribute("styel","text-align:right");
         buttonNode.innerHTML = newItem[0][0];
         var label2Node = document.createElement('label');
         label2Node.setAttribute("id", "priceQ");
+        label2Node.setAttribute("style","text-align:right; padding:rignt:16px;")
         label2Node.innerHTML = " $" + ((newItem[0][1] * newItem[0][2]) * 1.06).toFixed(2);
 
         divNode.append(label1Node);
@@ -64,10 +67,13 @@ function ADDER(s)
 function remover(s)
 {
     var x = items.findIndex(a => a[0] == s.childNodes[1].innerHTML);
-    s.childNodes[0].innerHTML--;
     items[x][2]--;
-    if (s.childNodes[0].innerHTML == "0")
+    s.childNodes[0].innerHTML = items[x][2] + " ";
+    if (s.childNodes[0].innerHTML == 0)
+    {
+        alert();
             s.remove();
+    }
     s.childNodes[2].innerHTML = " $"+(items[x][1]*s.childNodes[0].innerHTML*1.06).toFixed(2);
     }
 
@@ -82,8 +88,7 @@ function checkCart(newItem)
         if (newItem[0][0] == list[i].childNodes[1].innerHTML)
         {
             flag = true;
-            ++list[i].childNodes[0].innerHTML;
-            newItem[0][2]++;
+            list[i].childNodes[0].innerHTML = ++newItem[0][2] + " ";
             list[i].childNodes[2].innerHTML = " $" + ((newItem[0][1] * newItem[0][2]) * 1.06).toFixed(2);
         }
     }

@@ -53,17 +53,10 @@ body{
     overflow: auto;
 }
 
-/*#item
-{
-    color:black;
-    display:inline-block;
-    padding: 20px;
-    background-color: #ffebcc;
-    border: 1px black solid;
-    font-weight: bold;
-    font-size: 20px;
-    width:65%;
-}*/
+.cart{
+    padding-left: 20px;
+}
+
 .WhiteBack button{
     color:black;
     display:inline-block;
