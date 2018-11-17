@@ -9,7 +9,6 @@ function LOADER()
 return items;
 }
 
-LOADER();
 $( document ).ready(function() {
     for(var i = 0; i < items.length; i++)
     {
@@ -31,7 +30,6 @@ $( document ).ready(function() {
 
         document.getElementById("left").append(divNode);
     }
-   // printer();
 });
 
 
@@ -92,9 +90,6 @@ function checkCart(newItem)
     return flag;
 }
 
-
-
-
 function printer()
 {
     for(var i = 0; i < items.length; i++)
@@ -103,7 +98,7 @@ function printer()
 
 function STARTER()
 {
-    var s = document.getElementById("starter").childNodes[0].innerHTML;
+    var s = document.getElementsByClassName("starter")[0].childNodes[0].innerHTML;
     if (s == "Start Order")
     {
         $('#right').fadeIn(1000);

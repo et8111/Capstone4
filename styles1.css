@@ -10,12 +10,12 @@ body{
     font-size: 20px;
 }
 
-#starter
+.starter
 {
     text-align:center;
     margin-top: 50px;
 }
-#starter button{
+.starter button{
     padding: 20px;
     background-color: #fcb040;
     border: 1px black solid;
@@ -23,11 +23,11 @@ body{
     font-size: 25px;
     width:174px;
 }
-#starter button:hover{
+.starter button:hover{
     background-color: #ffc46c;
     cursor:-webkit-grab;
 }
-#starter button:active{
+.starter button:active{
     cursor:-webkit-grabbing;
     background-color: #ffd99f;
 }
