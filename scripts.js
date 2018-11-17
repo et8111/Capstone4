@@ -73,11 +73,9 @@ function remover(s)
 
 function clearer()
 {
-    var list = $(".cart");
-    for(var i = 0; i < list.length; i++)
-        remover(list[i]);
-    if (list.length>0)
-    clearer();
+    var list = document.getElementsByClassName("cart");
+    for(var i = list.length-1; i >= 0; i--)
+        list[i].remove();
 }
 
 //checks if already exists in the cart and adds to element
