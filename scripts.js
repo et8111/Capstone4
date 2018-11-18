@@ -1,4 +1,5 @@
 var items = LOADER();
+var total = 0.0;
 
 function LOADER()
 {
@@ -58,7 +59,7 @@ function ADDER(s)
 
         document.getElementById("right").append(divNode);
     }
-
+    doTaxes();
 }
 
 function remover(s)
@@ -69,6 +70,7 @@ function remover(s)
     if (s.childNodes[0].innerHTML == 0)
             s.remove();
     s.childNodes[2].innerHTML = " $"+(items[x][1]*s.childNodes[0].innerHTML*1.06).toFixed(2);
+    doTaxes();
 }
 
 function clearer()
@@ -76,6 +78,8 @@ function clearer()
     var list = document.getElementsByClassName("cart");
     for(var i = list.length-1; i >= 0; i--)
         list[i].remove();
+    items = LOADER();
+    doTaxes();
 }
 
 //checks if already exists in the cart and adds to element
@@ -110,5 +114,18 @@ function STARTER()
         $('#right').fadeIn(1000);
         $('#left').fadeIn(1000);
         $('.midButtons').fadeIn(1000);
+        $("#total").fadeIn(1000);
+
     }
+}
+
+function doTaxes()
+{
+    total = 0;
+    var temp = items.filter(a => a[2] > 0);
+    for(var i in temp){total+= temp[i][1]*temp[i][2];}
+    var tempTag = document.getElementById("total").getElementsByTagName("span");
+    tempTag[0].innerHTML = "Sub-total: $"+total.toFixed(2);
+    tempTag[1].innerHTML = "Tax: $"+(total*.06).toFixed(2);
+    tempTag[2].innerHTML = "Total: $"+(total*1.06).toFixed(2);
 }
