@@ -3,10 +3,13 @@ var total = 0.0;
 
 function LOADER()
 {
-    var items = [["Cheesebuger",3.0,0],["Hamburger",3.0,0],["Bacon Smokehouse Burger",5.0,0]
+    var items = [["Cheesebuger",2.0,0],["Hamburger",2.0,0],["Bacon Smokehouse Burger",5.0,0]
     ,["Double Bacon Smokehouse Burger",5.0,0],["10 Piece Nuggets", 6.0, 0],["Double Cheeseburger",3.0,0]
     ,["Filet-O-Fish",3.0,0],["Artisan Grilled Chicken Sandwich",5.0,0],["Grilled Chicken Sandwich",3.0,0]
     ,["Double 1/4lb With Cheese",6.0,0], ["Fries",2.99, 0]];
+    items = items.sort(function(a,b) {
+        return a[1] - b[1];
+    });
 return items;
 }
 
@@ -129,3 +132,17 @@ function doTaxes()
     tempTag[1].innerHTML = "Tax: $"+(total*.06).toFixed(2);
     tempTag[2].innerHTML = "Total: $"+(total*1.06).toFixed(2);
 }
+
+
+
+/*
+visibility: visible;
+    width: 160px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;*/

@@ -112,3 +112,16 @@ body{
 #BUTTONS{
     float: right;max-width: 200px;
 }
+
+#finalize{
+    width: 35%;
+    height: 200px;
+    position: absolute;
+    left:32%;
+    text-align: center;
+    top: 30%;
+    border: 1px black solid;
+    background-color: rgb(255, 81, 0);
+    border-radius: 12px;
+    color: white;
+}
