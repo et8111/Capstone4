@@ -6,7 +6,7 @@ function LOADER()
     var items = [["Cheesebuger",3.0,0],["Hamburger",3.0,0],["Bacon Smokehouse Burger",5.0,0]
     ,["Double Bacon Smokehouse Burger",5.0,0],["10 Piece Nuggets", 6.0, 0],["Double Cheeseburger",3.0,0]
     ,["Filet-O-Fish",3.0,0],["Artisan Grilled Chicken Sandwich",5.0,0],["Grilled Chicken Sandwich",3.0,0]
-    ,["Double 1/4lb With Cheese",6.0,0]];
+    ,["Double 1/4lb With Cheese",6.0,0], ["Fries",2.99,0]];
 return items;
 }
 
