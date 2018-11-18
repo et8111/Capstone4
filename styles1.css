@@ -108,3 +108,7 @@ body{
 #total span{
     margin-left: 40px;
 }
+
+#BUTTONS{
+    float: right;max-width: 200px;
+}

@@ -6,7 +6,7 @@ function LOADER()
     var items = [["Cheesebuger",3.0,0],["Hamburger",3.0,0],["Bacon Smokehouse Burger",5.0,0]
     ,["Double Bacon Smokehouse Burger",5.0,0],["10 Piece Nuggets", 6.0, 0],["Double Cheeseburger",3.0,0]
     ,["Filet-O-Fish",3.0,0],["Artisan Grilled Chicken Sandwich",5.0,0],["Grilled Chicken Sandwich",3.0,0]
-    ,["Double 1/4lb With Cheese",6.0,0], ["Fries",2.99,0]];
+    ,["Double 1/4lb With Cheese",6.0,0], ["Fries",2.99, 0]];
 return items;
 }
 
@@ -106,7 +106,7 @@ function printer()
     console.log(items[i][0] + " " + items[i][1] + " " + items[i][2]);
 }
 
-function STARTER()
+function STARTER(word)
 {
     var s = document.getElementsByClassName("starter")[0].childNodes[0].innerHTML;
     if (s == "Start Order")
@@ -115,7 +115,7 @@ function STARTER()
         $('#left').fadeIn(1000);
         $('.midButtons').fadeIn(1000);
         $("#total").fadeIn(1000);
-
+        $(word).fadeTo(1000,.3);
     }
 }
 

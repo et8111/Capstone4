@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="container">
-        <p class="starter" onclick="STARTER();" ><button>Start Order</button></p>
+        <p class="starter" onclick="STARTER(this);" ><button>Start Order</button></p>
     </div>
 
     <hr style="width:80%">
@@ -22,8 +22,10 @@
             <span>Price:</span>
             <hr>
         </div>
+        <div id="BUTTONS">
         <p class="midButtons"><button onclick="clearer();">Clear</button></p>
-
+        <p class="midButtons" style="float:right"><button onclick="clearer();">Checkout</button></p>
+    </div>
     <div id="left" hidden="hidden"  class="WhiteBack">
             <span style="padding-right:15px;">Idx)</span>
             <span style="padding-right:240px;">Item:</span>
