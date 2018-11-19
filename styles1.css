@@ -115,13 +115,29 @@ body{
 
 #finalize{
     width: 35%;
-    height: 200px;
+    height: 250px;
     position: absolute;
     left:32%;
     text-align: center;
     top: 30%;
-    border: 1px black solid;
+    border: 2px black solid;
     background-color: rgb(255, 81, 0);
     border-radius: 12px;
     color: white;
+    display: none;
+}
+
+#Closer{
+    text-align: right;
+    margin: 0;
+    margin-right: 10px;
+}
+
+#Closer span:hover{
+    color: rgb(247, 165, 127);
+    cursor:-webkit-grab;
+}
+
+#Closer span:active{
+    color: rgb(143, 91, 68);
 }

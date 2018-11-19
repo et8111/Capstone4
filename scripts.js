@@ -133,16 +133,12 @@ function doTaxes()
     tempTag[2].innerHTML = "Total: $"+(total*1.06).toFixed(2);
 }
 
+function finalizer()
+{
+    $("#finalize").fadeIn(250);
+}
 
-
-/*
-visibility: visible;
-    width: 160px;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;*/
+function closeFinalizer()
+{
+    $("#finalize").fadeOut(250);
+}
