@@ -29,19 +29,22 @@
         <div id="finalize">
             <p id="Closer"><span onclick="closeFinalizer();">X</span></p>
             <ul class="tabs">
-                <li class="tab-link current" data-tab="tab-1">Cash</li>
+                <li class="tab-link current"data-tab="tab-1">Cash</li>
                 <li class="tab-link" data-tab="tab-2">Card</li>
                 <li class="tab-link" data-tab="tab-3">Check</li>
             </ul>
             <div id="tab-1" class="tab-content current">
-                Cash:<br>$<input type="number">
+                Cash:<br>$<input onkeypress="Javascript: if (event.keyCode==13) money(0);" type="number">
             </div>
             <div id="tab-2" class="tab-content">
                 Card#:<br><input type="number"> <br>
-                CVV:<br><input type="number">
+                CVV:<br><input onkeypress="Javascript: if (event.keyCode==13) money(1);" type="number">
             </div>
             <div id="tab-3" class="tab-content">
-                Check#:<br><input>
+                Check#:<br><input onkeypress="Javascript: if (event.keyCode==13) money(1);" type="number">
+            </div>
+            <div id="money">
+                    <span>Total: $0.00</span>
             </div>
         </div>
     </div>
