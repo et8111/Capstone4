@@ -116,10 +116,10 @@ body{
 #finalize{
     width: 35%;
     height: 250px;
-    position: absolute;
+    position: relative;
     left:32%;
     text-align: center;
-    top: 30%;
+    top: 10%;
     border: 2px black solid;
     background-color: rgb(255, 81, 0);
     border-radius: 12px;
@@ -140,4 +140,44 @@ body{
 
 #Closer span:active{
     color: rgb(143, 91, 68);
+}
+
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.tabs li{
+    background: none;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+ul.tabs li.current{
+    background: #ffb039;
+}
+
+.tab-content{
+    display: none;
+    background: #ffb039;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#god{
+    position: absolute;
+    height: 79vh;
+    width: 99vw;
+    display: none;
 }

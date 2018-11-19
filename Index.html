@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WacArnold's</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link  rel="stylesheet" type="text/css"  href="styles1.css"></link>
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+    </link>
     <script src="scripts.js"></script>
 </head>
+
 <body>
     <div id="container">
-        <p class="starter" onclick="STARTER(this);" ><button>Start Order</button></p>
+        <p class="starter" onclick="STARTER(this);"><button>Start Order</button></p>
     </div>
 
     <hr style="width:80%">
 
     <div id="right" hidden="hidden" class="WhiteBack">
-            <span style="padding-right:15px;">Qty)</span>
-            <span style="padding-right:235px;">Item:</span>
-            <span>Price:</span>
-            <hr>
-        </div>
+        <span style="padding-right:15px;">Qty)</span>
+        <span style="padding-right:235px;">Item:</span>
+        <span>Price:</span>
+        <hr>
+    </div>
+    <div id="god">
         <div id="finalize">
-                <p id="Closer"><span onclick="closeFinalizer();">X</span></p>
-             </div>
-        <div id="BUTTONS">
+            <p id="Closer"><span onclick="closeFinalizer();">X</span></p>
+            <ul class="tabs">
+                <li class="tab-link current" data-tab="tab-1">Cash</li>
+                <li class="tab-link" data-tab="tab-2">Card</li>
+                <li class="tab-link" data-tab="tab-3">Check</li>
+            </ul>
+            <div id="tab-1" class="tab-content current">
+                Cash:<br>$<input type="number">
+            </div>
+            <div id="tab-2" class="tab-content">
+                Card#:<br><input type="number"> <br>
+                CVV:<br><input type="number">
+            </div>
+            <div id="tab-3" class="tab-content">
+                Check#:<br><input>
+            </div>
+        </div>
+    </div>
+    <div id="BUTTONS">
         <p class="midButtons"><button onclick="clearer();">Clear</button></p>
         <p class="midButtons" style="float:right"><button onclick="finalizer()">Checkout</button></p>
     </div>
-    <div id="left" hidden="hidden"  class="WhiteBack">
-            <span style="padding-right:15px;">Idx)</span>
-            <span style="padding-right:240px;">Item:</span>
-            <span>Price:</span>
+    <div id="left" hidden="hidden" class="WhiteBack">
+        <span style="padding-right:15px;">Idx)</span>
+        <span style="padding-right:240px;">Item:</span>
+        <span>Price:</span>
         <hr>
     </div>
-    <div id="total"  class="WhiteBack" hidden = "hidden">
+    <div id="total" class="WhiteBack" hidden="hidden">
         <span>Sub-total: $0.00</span>
         <span>Tax: $0.00</span>
         <span>Total: $0.00</span>
     </div>
 </body>
+
 </html>

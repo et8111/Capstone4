@@ -135,10 +135,26 @@ function doTaxes()
 
 function finalizer()
 {
+    $("#god").fadeIn(1);
     $("#finalize").fadeIn(250);
 }
 
 function closeFinalizer()
 {
     $("#finalize").fadeOut(250);
+    $("#god").fadeOut(1);
 }
+
+$(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
